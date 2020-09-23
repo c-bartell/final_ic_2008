@@ -13,7 +13,7 @@ class Recipe
   end
 
   def ingredients
-    @ingredients_required.keys
+    ingredients_required.keys
   end
 
   def total_calories

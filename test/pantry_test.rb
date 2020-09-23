@@ -42,7 +42,6 @@ class PantryTest < Minitest::Test
 
   def test_has_enough_ingredients
     pantry = Pantry.new
-
     cookbook = CookBook.new
     recipe1 = Recipe.new("Mac and Cheese")
     ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})

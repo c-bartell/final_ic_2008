@@ -17,7 +17,7 @@ class Pantry
 
   def enough_ingredients_for?(recipe)
     recipe.ingredients_required.all? do |ingredient, amount|
-      stock[ingredient] >= amount
+      stock_check(ingredient) >= amount
     end
   end
 end
