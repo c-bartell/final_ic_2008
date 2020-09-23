@@ -65,7 +65,7 @@ class CookBookTest < Minitest::Test
   end
 
   def test_it_can_return_creation_date
-    day = Date.new(2020, 4, 22)
+    day = Date.new(2020, 04, 22)
     Date.stubs(:today).returns(day)
     cookbook = CookBook.new
 
