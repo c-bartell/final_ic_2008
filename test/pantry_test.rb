@@ -42,14 +42,15 @@ class PantryTest < Minitest::Test
 
   def test_has_enough_ingredients
     pantry = Pantry.new
-    pantry.restock(ingredient1, 5)
-    pantry.restock(ingredient1, 10)
+
     cookbook = CookBook.new
     recipe1 = Recipe.new("Mac and Cheese")
     ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})
     ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 30})
     ingredient3 = Ingredient.new({name: "Ground Beef", unit: "oz", calories: 100})
     ingredient4 = Ingredient.new({name: "Bun", unit: "g", calories: 75})
+    pantry.restock(ingredient1, 5)
+    pantry.restock(ingredient1, 10)
     recipe1.add_ingredient(ingredient1, 2)
     recipe1.add_ingredient(ingredient2, 8)
     cookbook.add_recipe(recipe1)
